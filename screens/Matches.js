@@ -4,9 +4,9 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 var team = [
   {name: 'FF'},
+  {name: 'CG'},
   {name: 'JS'},
   {name: 'CG'},
-  {name: 'CS'},
 ]
 
 export default class Matches extends React.Component {
