@@ -1,0 +1,286 @@
+{
+  "users":{
+    "1":{
+      "name": "",
+      "email": "",
+      "team1": "0",
+      "team2": "0",
+      "team3": "0"
+  },"2":{
+    "name": "",
+    "email": "",
+    "team1": "0",
+    "team2": "0",
+    "team3": "0"
+}
+  },
+  "players":{
+  "FF": {
+    "1":{
+          "Name": "Swapnil Chogale",
+          "Price": "12",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "1"
+      },
+    "2":{
+          "Name": "Zahid Farooqui",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "2"
+      },
+      "3":{
+          "Name": "Saurabh",
+          "Price": "11",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "3"
+      },
+      "5":{
+          "Name": "Avi Gupta",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "4"
+      },
+      "6":{
+          "Name": "Nikhil Tiwari",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "5"
+      },
+      "7":{
+          "Name": "Nikhil Ghadge",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "6"
+      },
+      "8":{
+          "Name": "Rajesh Hegde",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "7"
+      },
+      "9":{
+          "Name": "Nilesh ",
+          "Price": "8",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "8"
+      },
+      "10":{
+          "Name": "Saumil ",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "9"
+      }
+    },
+  "CG": {
+    "11":{
+          "Name": "Dhawal Patel",
+          "Price": "11",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "20"
+      },
+    "12":{
+          "Name": "Bhavesh Buwa",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "21"
+      },
+    "13":{
+          "Name": "Shantanu Dandekar",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "22"
+      },
+      "14":{
+          "Name": "Suhail Kurwale",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "23"
+      },
+      "15":{
+          "Name": "Kiran Mahajan",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "24"
+      },
+      "16":{
+          "Name": "Amol Jadhav",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "25"
+      },
+      "17":{
+          "Name": "Rohit Bhaskar Wagh",
+          "Price": "8",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "26"
+      },
+      "18":{
+          "Name": "Dhananjay Dheru",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "27"
+      },
+      "19":{
+          "Name": "P.V.S Kamal Nadh Jaichand",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "28"
+      },
+      "20":{
+          "Name": "Burhanuddin Madraswala",
+          "Price": "8",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "29"
+      }
+    },
+  "JS": {
+      "21":{
+          "Name": "Saurabh Gupta",
+          "Price": "11",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "40"
+      },
+      "22":{
+          "Name": "Navin ",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "41"
+      },
+      "23":{
+          "Name": "Rifton ",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "42"
+      },
+      "24":{
+          "Name": "Aakash",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "43"
+      },
+      "25":{
+          "Name": "Gufran Chorwadwala",
+          "Price": "9",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "44"
+      },
+      "26":{
+          "Name": "Rohit Chettri",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "45"
+      },
+      "27":{
+          "Name": "Santosh Kumbhargave ",
+          "Price": "8",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "46"
+      },
+      "28":{
+          "Name": "Sanjay Kumar ",
+          "Price": "8",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "47"
+      },
+      "29":{
+          "Name": "Khalid Alam",
+          "Price": "8",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "48"
+      },
+      "30":{
+          "Name": "Dashrath Gawas",
+          "Price": "10",
+          "Round 1": "0",
+          "Round 2": "0",
+          "Round 3": "0",
+          "Finals": "0",
+          "Key": "49"
+      }
+    }
+  }
+}
