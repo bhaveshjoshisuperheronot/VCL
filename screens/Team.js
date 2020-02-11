@@ -10,11 +10,8 @@ var playerCount = 0;
 var team1Count = 0;
 var team2Count = 0;
 var teamPrice = 100;
-var playersSelected = 0;
-
-function onPressHandler( id ){
-  Alert.alert(id);
-}
+var playersSelected = [];
+var user = Firebase.auth().currentUser;
 
 
 
@@ -42,11 +39,12 @@ export default class Team extends React.Component {
         buttonDisable: true,
         teamprice: 100,
         playersselected: 0,
+        playerID: [],
        };
     }
     
     componentDidMount(){
-      data_listA = []; data_listB = []; data_listFinal= []; teamPrice = 100; playersSelected, team1Count, team2Count = 0;
+      data_listA = []; data_listB = []; data_listFinal= []; teamPrice = 100; playersSelected = 0; team1Count = 0; team2Count = 0;
         Firebase.database().ref('/players/').orderByChild('team').equalTo(this.props.navigation.state.params.teamA).on("value", function(snapshot) {
           snapshot.forEach(function(data) {            
             data_listFinal.push( data.val() );
@@ -75,13 +73,12 @@ export default class Team extends React.Component {
       data.item.isSelect = !data.item.isSelect;
       data.item.selectedClass = data.item.isSelect ? styles.selected : styles.playerRow;
       if(data.item.isSelect){
+        player_index.push(data.item.key);
         if(data.item.team == this.props.navigation.state.params.teamA){
            team1Count++;
         }
         else{team2Count++;}
         teamPrice = teamPrice - Number(data.item.price);
-        console.log(team1Count)
-        console.log(team2Count)
         playersSelected = playersSelected + 1;
         this.setState({ teamprice : teamPrice, playersselected : playersSelected });
         if(playersSelected == 11 && teamPrice >= 0){
@@ -93,14 +90,18 @@ export default class Team extends React.Component {
         }
       }
       else{
-        // if(data.item.team == this.props.navigation.state.params.teamA){team1Count--;}
-        // else{team2Count--;}
         teamPrice = teamPrice + Number(data.item.price);
         playersSelected = playersSelected - 1;
         if(data.item.team == this.props.navigation.state.params.teamA){
           team1Count--;
         }
         else{team2Count--;}
+        const index = player_index.indexOf(data.item.key)
+        if (index !== -1) {
+          player_index.splice(index, 1);
+          
+        }
+        
         this.setState({ teamprice : teamPrice, playersselected : playersSelected });  
         if(playersSelected == 11 && teamPrice >= 0){
           if(team1Count < 8 && team2Count < 8){}
@@ -115,7 +116,6 @@ export default class Team extends React.Component {
         item => data.item.team === item.team
       );
 
-      //console.log(data_listFinal)
 
       const index = this.state.dataFinal.findIndex(
         item => data.item.key === item.key
@@ -125,6 +125,7 @@ export default class Team extends React.Component {
       
       this.setState({
         dataFinal: this.state.dataFinal,
+        playerID: player_index,
       });
       
     };
@@ -143,7 +144,9 @@ export default class Team extends React.Component {
             
           </TouchableOpacity>
         </View>
-      
+    submitTeam = playerID => {
+      Firebase.database().ref('/users/'+user.uid).set({"team1" : playerID})
+    }
   render(){
     return (
         <View style={styles.container}>
@@ -157,6 +160,7 @@ export default class Team extends React.Component {
           <View><Button 
             title="Save Team"
             disabled={this.state.buttonDisable}
+            onPress={() => this.submitTeam(this.state.playerID)}
           /></View>
           <View></View>
             <FlatList
