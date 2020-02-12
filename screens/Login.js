@@ -19,13 +19,8 @@ export default class Login extends React.Component {
     render() {
         return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
-                <View style={styles.logoContainer}>
-                    <Image 
-                        source={require('../assets/logo.png')}
-                        style={styles.logo}
-                    />
-                </View>
                 <View style={styles.formContainer}>
+                    <Image source={require('../asset-img/vcl.png')} style={{width: 150, height: 120}} />
                     <TextInput
                         style={styles.inputBox}
                         value={this.state.email}

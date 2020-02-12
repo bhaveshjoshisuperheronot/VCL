@@ -11,7 +11,8 @@ var team1Count = 0;
 var team2Count = 0;
 var teamPrice = 100;
 var playersSelected = [];
-var user = Firebase.auth().currentUser;
+var user;
+
 
 
 
@@ -44,7 +45,8 @@ export default class Team extends React.Component {
     }
     
     componentDidMount(){
-      data_listA = []; data_listB = []; data_listFinal= []; teamPrice = 100; playersSelected = 0; team1Count = 0; team2Count = 0;
+      data_listA = []; data_listB = []; data_listFinal= []; teamPrice = 100; playersSelected = 0; team1Count = 0; team2Count = 0; player_index= [];
+      user= Firebase.auth().currentUser;
         Firebase.database().ref('/players/').orderByChild('team').equalTo(this.props.navigation.state.params.teamA).on("value", function(snapshot) {
           snapshot.forEach(function(data) {            
             data_listFinal.push( data.val() );
@@ -145,14 +147,15 @@ export default class Team extends React.Component {
           </TouchableOpacity>
         </View>
     submitTeam = playerID => {
-      Firebase.database().ref('/users/'+user.uid).set({"team1" : playerID})
+      const team = this.props.navigation.state.params.match
+      Firebase.database().ref('/users/'+user.uid+'/'+this.props.navigation.state.params.match).set({team: playerID,}).then(() =>this.props.navigation.navigate('Points', {match: this.props.navigation.state.params.match, round: this.props.navigation.state.params.round}))
     }
   render(){
     return (
         <View style={styles.container}>
           
           <View>
-            <Text>Price Remaining: {this.state.teamprice} credits</Text>
+            <Text>Price Remaining: {this.state.teamprice} credits test</Text>
             <Text>Players Selected : {this.state.playersselected} player(s) selected</Text>
             <Text>Players {this.props.navigation.state.params.teamA}: {team1Count} (max 7 players allowed)</Text>
             <Text>Players {this.props.navigation.state.params.teamB}: {team2Count} (max 7 players allowed)</Text>

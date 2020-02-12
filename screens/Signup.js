@@ -7,7 +7,7 @@ export default class Signup extends React.Component {
         name: '',
         email: '',
         password: '',
-        username: ''
+        username: '',
     }
     
     handleSignUp = () => {
@@ -26,9 +26,19 @@ export default class Signup extends React.Component {
                         email: user.email,
                         created_at: Date.now(),
                         name: user.username,
-                        team1: '',
-                        team2: '',
-                        team3: ''
+                        team1: '0',
+                        team2: '0',
+                        team3: '0',
+                        team4: '0',
+                        team5: '0',
+                        team6: '0',
+                        total1: '0',
+                        total2: '0',
+                        total3: '0',
+                        total4: '0',
+                        total5: '0',
+                        total6: '0',
+                        totalfinal: '0'
                       })
                       .then(function(snapshot) {
                          console.log('Snapshot', snapshot);
